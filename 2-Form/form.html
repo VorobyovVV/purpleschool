@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form.css"> 
     <title>Форма</title>
 </head>
 <body>
@@ -22,9 +23,9 @@
             </div>
             <div>
             <label for="Имя"></label>
-            <input type="text" id="Имя" name="Имя" placeholder="Имя" />
+            <input type="text" id="Имя" name="Имя" placeholder="Имя"  />
             <label for="Фамилия"></label>
-            <input type="text" id="Фамилия" name="Имя" placeholder="Фамилия" />
+            <input type="text" id="Фамилия" name="Имя" placeholder="Фамилия"  />
         </div>
         <div>
             <label for="email"></label>
@@ -36,14 +37,12 @@
         </div>
         <div>
             
-            <input type="checkbox" name="checkbox" id="checkbox">
-            <label for="checkbox">Я принмаю условия</label>
-            <span><a href="#">Условия использования</a></span>
+            <input type="checkbox" name="checkbox" id="checkbox" required >
+            <label for="checkbox" class="checkbox">Я принмаю условия</label>
+            <span class="condition"><a href="#">Условия использования</a></span>
         </div>
         </form>
-
-    
-    </main>
+   </main>
     
 </body>
 </html>

@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+
+
+body{
+    background-color: #F39494;
+    
+}
+
+h1{
+    font-size: 36px;
+    color: #333333;
+}
+
+span{
+    font-size: 18px;
+    color: #666666;
+}
+
+a {
+    font-size: 18px;
+    color: #089FE0;
+
+}
+
+label{
+    font-size: 16px;
+    color: #333333;
+}
+
+
+
+input::placeholder{
+    font-size: 16px;
+    color: #999999;
+    
+}
+
+button{
+    font-size: 18px;
+    color: #FFFFFF;
+    background-color: #089FE0;
+}
+
+.checkbox{
+    font-size: 14px;
+    color: #666666;
+}
+
+.condition{
+    font-size: 14px;
+    color: #089FE0;
+
+}
+
