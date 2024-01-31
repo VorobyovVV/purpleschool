@@ -1,0 +1,92 @@
+
+body{
+    background-color: #111827;
+}
+
+nav {
+    color: #FFFFFF;
+    font-size: 16px;
+    padding: 33px 50px;
+    margin-bottom: 80px;
+
+}
+
+.header_nav{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.search_content input{
+    padding: 5px 15px;
+    margin: 0px;
+    border-radius: 100px;
+    height: 40px;
+    
+}
+
+input{
+    background-color: #1F293799;
+}
+
+.date{
+    color: #FFFFFF;
+    font-size: 14px;
+    margin-bottom: 14px;
+    padding: 0px;
+}
+
+h1{
+    color: #FFFFFF;
+    font-size: 24px;
+    padding: 0px;
+    margin-bottom: 30px;
+}
+
+.avatar{
+    padding: 0;
+    margin-bottom: 28px;
+}
+
+.name{
+    color: #FFFFFF;
+    font-size: 16px;
+    padding: 0px;
+    margin-bottom: 28px;
+}
+
+.proffesion{
+    color: #FFFFFF;
+    font-size: 14px;
+    padding: 0px;
+    margin-bottom: 28px;
+}
+
+.info{
+    padding: 0px;
+    margin-bottom: 28px;
+}
+
+.pc{
+    padding: 0px;
+    margin-bottom: 69px;
+}
+
+.first_text{
+    color: #FFFFFF;
+    font-size: 20px;
+    padding: 0px;
+    margin-bottom: 50px;
+}
+
+.second_text{
+    color: #FFFFFF;
+    font-size: 16px;
+    padding: 0px;
+    margin-bottom: 50px;
+}
+
+footer{
+    color: #FFFFFF;
+    font-size: 16px;
+}
