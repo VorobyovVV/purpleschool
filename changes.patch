@@ -1,0 +1,360 @@
+From 35f376af35459353346635c37a1ee4c3ced58624 Mon Sep 17 00:00:00 2001
+From: Vladislav <st091242@student.spbu.ru>
+Date: Tue, 23 Jan 2024 16:10:59 +0300
+Subject: [PATCH 1/2] fix bag
+
+---
+ 1-blog/index.html | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/1-blog/index.html b/1-blog/index.html
+index a9e7435..9b2fef6 100644
+--- a/1-blog/index.html
++++ b/1-blog/index.html
+@@ -1,5 +1,5 @@
+ <!DOCTYPE html>
+-<html lang="en">
++<html lang="ru">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+@@ -16,7 +16,7 @@
+         </ul>
+         <form>
+           <input type="search" name="search" placeholder="Поиск">
+-          <img src="materials/search.png" alt="search" />  
++          <img src="./materials/search.png" alt="лупа для поиска" />  
+            
+         </form>
+         </nav>
+@@ -27,14 +27,14 @@
+             <span>FRONTEND &bull; 12 мая 2024</span>
+             <h1>Теория цвета - Как цвет влияет на поведение Потребителей</h1>
+             
+-            <img src="materials/Ellipse 1.png" alt="avatar" /> 
++            <img src="./materials/Ellipse 1.png" alt="аватарка разработчика" /> 
+             <span>Наталья Васильева</span> 
+             <span>Разработчик</span>
+         </section>
+             
+         
+         <section>
+-            <img src="materials/Rectangle 181.png" alt="picture" />
++            <img src="./materials/Rectangle 181.png" alt="большой компьютер на странице блога" />
+             <p>Теория цвета — это особенности эмоционального восприятия человеком 
+                 тех или иных цветовых решений. Цвета и различные их комбинации 
+                 влияют на психику человека, а значит, во многом определяют его 
+-- 
+2.34.1.windows.1
+
+
+From e4c4140c1012d9de031484b7a73ca98d72cc2ec0 Mon Sep 17 00:00:00 2001
+From: Vladislav <st091242@student.spbu.ru>
+Date: Wed, 31 Jan 2024 22:58:20 +0300
+Subject: [PATCH 2/2] My comment
+
+---
+ 1-blog/blog.css   | 92 +++++++++++++++++++++++++++++++++++++++++++++++
+ 1-blog/index.html | 25 +++++++------
+ 2-Form/form.css   | 55 ++++++++++++++++++++++++++++
+ 2-Form/form.html  | 15 ++++----
+ index.html        | 11 ------
+ 5 files changed, 168 insertions(+), 30 deletions(-)
+ create mode 100644 1-blog/blog.css
+ create mode 100644 2-Form/form.css
+ delete mode 100644 index.html
+
+diff --git a/1-blog/blog.css b/1-blog/blog.css
+new file mode 100644
+index 0000000..f0e0276
+--- /dev/null
++++ b/1-blog/blog.css
+@@ -0,0 +1,92 @@
++
++body{
++    background-color: #111827;
++}
++
++nav {
++    color: #FFFFFF;
++    font-size: 16px;
++    padding: 33px 50px;
++    margin-bottom: 80px;
++
++}
++
++.header_nav{
++    list-style: none;
++    padding: 0px;
++    margin: 0px;
++}
++
++.search_content input{
++    padding: 5px 15px;
++    margin: 0px;
++    border-radius: 100px;
++    height: 40px;
++    
++}
++
++input{
++    background-color: #1F293799;
++}
++
++.date{
++    color: #FFFFFF;
++    font-size: 14px;
++    margin-bottom: 14px;
++    padding: 0px;
++}
++
++h1{
++    color: #FFFFFF;
++    font-size: 24px;
++    padding: 0px;
++    margin-bottom: 30px;
++}
++
++.avatar{
++    padding: 0;
++    margin-bottom: 28px;
++}
++
++.name{
++    color: #FFFFFF;
++    font-size: 16px;
++    padding: 0px;
++    margin-bottom: 28px;
++}
++
++.proffesion{
++    color: #FFFFFF;
++    font-size: 14px;
++    padding: 0px;
++    margin-bottom: 28px;
++}
++
++.info{
++    padding: 0px;
++    margin-bottom: 28px;
++}
++
++.pc{
++    padding: 0px;
++    margin-bottom: 69px;
++}
++
++.first_text{
++    color: #FFFFFF;
++    font-size: 20px;
++    padding: 0px;
++    margin-bottom: 50px;
++}
++
++.second_text{
++    color: #FFFFFF;
++    font-size: 16px;
++    padding: 0px;
++    margin-bottom: 50px;
++}
++
++footer{
++    color: #FFFFFF;
++    font-size: 16px;
++}
+\ No newline at end of file
+diff --git a/1-blog/index.html b/1-blog/index.html
+index 9b2fef6..409148b 100644
+--- a/1-blog/index.html
++++ b/1-blog/index.html
+@@ -3,18 +3,19 @@
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
++    <link rel="stylesheet" href="./blog.css">
+     <title>Blog</title>
+ </head>
+ <body>
+     <header>
+         <nav>
+-        <ul>
++        <ul class="header_nav">
+             <li><a href="#"></a>Мой блог</li>
+             <li><a href="#"></a>HTML и CSS</li>
+             <li><a href="#"></a>Frontend</li>
+             <li><a href="#"></a>Backend</li>
+         </ul>
+-        <form>
++        <form class="search_content">
+           <input type="search" name="search" placeholder="Поиск">
+           <img src="./materials/search.png" alt="лупа для поиска" />  
+            
+@@ -24,18 +25,20 @@
+     <main>
+         <section>
+             
+-            <span>FRONTEND &bull; 12 мая 2024</span>
++            <span class="date">FRONTEND &bull; 12 мая 2024</span>
+             <h1>Теория цвета - Как цвет влияет на поведение Потребителей</h1>
+-            
+-            <img src="./materials/Ellipse 1.png" alt="аватарка разработчика" /> 
+-            <span>Наталья Васильева</span> 
+-            <span>Разработчик</span>
++            <div class="info">
++            <img class="avatar" src="./materials/Ellipse 1.png" alt="аватарка разработчика" /> 
++            <span class="name">Наталья Васильева</span> 
++            <span class="proffesion">Разработчик</span>
++            </div>
+         </section>
+             
+         
+         <section>
+-            <img src="./materials/Rectangle 181.png" alt="большой компьютер на странице блога" />
+-            <p>Теория цвета — это особенности эмоционального восприятия человеком 
++            <img class="pc" src="./materials/Rectangle 181.png" alt="большой компьютер на странице блога" />
++            <p class="first_text">
++                Теория цвета — это особенности эмоционального восприятия человеком 
+                 тех или иных цветовых решений. Цвета и различные их комбинации 
+                 влияют на психику человека, а значит, во многом определяют его 
+                 поведение. Маркетологи и веб-дизайнеры хорошо знают, что правильно 
+@@ -43,12 +46,12 @@
+                 внимание пользователей, сформировать положительное отношение к продукту, 
+                 подтолкнуть посетителей к совершению целевых действий, 
+                 повысить конверсию.</p>
+-                <p>
++                <p class="second_text">
+                     Универсального ответа на вопрос, 
+                     как тот или иной цвет влияет на разных людей, нет. Эмоциональная и поведенческая реакция каждого человека зависит от личного опыта. 
+                     Вместе с тем можно выделить определенные закономерности влияния цветов на поведение пользователей. </p>
+ 
+-                <p>
++                <p class="second_text">
+                     В исследовании «Влияние цвета на маркетинг» (Impact of color on marketing) говорится, что 
+                     использование разных цветов может существенно влиять на настроение и поведение 
+                     потребителей. Утверждается, что от 60 до 90% покупателей (в зависимости от категории 
+diff --git a/2-Form/form.css b/2-Form/form.css
+new file mode 100644
+index 0000000..6309331
+--- /dev/null
++++ b/2-Form/form.css
+@@ -0,0 +1,55 @@
++@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
++
++
++
++body{
++    background-color: #F39494;
++    
++}
++
++h1{
++    font-size: 36px;
++    color: #333333;
++}
++
++span{
++    font-size: 18px;
++    color: #666666;
++}
++
++a {
++    font-size: 18px;
++    color: #089FE0;
++
++}
++
++label{
++    font-size: 16px;
++    color: #333333;
++}
++
++
++
++input::placeholder{
++    font-size: 16px;
++    color: #999999;
++    
++}
++
++button{
++    font-size: 18px;
++    color: #FFFFFF;
++    background-color: #089FE0;
++}
++
++.checkbox{
++    font-size: 14px;
++    color: #666666;
++}
++
++.condition{
++    font-size: 14px;
++    color: #089FE0;
++
++}
++
+diff --git a/2-Form/form.html b/2-Form/form.html
+index fe72c3d..ed62582 100644
+--- a/2-Form/form.html
++++ b/2-Form/form.html
+@@ -3,6 +3,7 @@
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
++    <link rel="stylesheet" href="form.css"> 
+     <title>Форма</title>
+ </head>
+ <body>
+@@ -22,9 +23,9 @@
+             </div>
+             <div>
+             <label for="Имя"></label>
+-            <input type="text" id="Имя" name="Имя" placeholder="Имя" />
++            <input type="text" id="Имя" name="Имя" placeholder="Имя"  />
+             <label for="Фамилия"></label>
+-            <input type="text" id="Фамилия" name="Имя" placeholder="Фамилия" />
++            <input type="text" id="Фамилия" name="Имя" placeholder="Фамилия"  />
+         </div>
+         <div>
+             <label for="email"></label>
+@@ -36,14 +37,12 @@
+         </div>
+         <div>
+             
+-            <input type="checkbox" name="checkbox" id="checkbox">
+-            <label for="checkbox">Я принмаю условия</label>
+-            <span><a href="#">Условия использования</a></span>
++            <input type="checkbox" name="checkbox" id="checkbox" required >
++            <label for="checkbox" class="checkbox">Я принмаю условия</label>
++            <span class="condition"><a href="#">Условия использования</a></span>
+         </div>
+         </form>
+-
+-    
+-    </main>
++   </main>
+     
+ </body>
+ </html>
+\ No newline at end of file
+diff --git a/index.html b/index.html
+deleted file mode 100644
+index 8d1adad..0000000
+--- a/index.html
++++ /dev/null
+@@ -1,11 +0,0 @@
+-<!DOCTYPE html>
+-<html lang="en">
+-<head>
+-    <meta charset="UTF-8">
+-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+-    <title>Мой проект</title>
+-</head>
+-<body>
+-        
+-</body>
+-</html>
+\ No newline at end of file
+-- 
+2.34.1.windows.1
+
