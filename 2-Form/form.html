@@ -1,48 +1,52 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="form.css"> 
-    <title>Форма</title>
-</head>
-<body>
-    <main>
-        <div>
-        <h1>Регистрация</h1>
-        
-        <span>Уже есть аккаунт?</span>
-        <a href="#" >Войти</a>
-        
-    </div> 
-       
-        <form>
-            <div>
-            <label for="Название"></label>
-            <input type="text" id="Название" name="Название" placeholder="Введите название компании"  value="Моя компания"/>
-            </div>
-            <div>
-            <label for="Имя"></label>
-            <input type="text" id="Имя" name="Имя" placeholder="Имя"  />
-            <label for="Фамилия"></label>
-            <input type="text" id="Фамилия" name="Имя" placeholder="Фамилия"  />
-        </div>
-        <div>
-            <label for="email"></label>
-            <input type="email" id="email" name="email" placeholder="email" required />
-        </div>
-
-        <div>
-            <button type="submit">Зарегистрироваться</button>
-        </div>
-        <div>
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="form.css"> 
+            <title>Форма</title>
+        </head>
+        <body>
+            <div class="container">
+                <div class="container__flex">
+            <main>
+                <div>
+                <h1>Регистрация</h1>
+                <div class="container__login">
+                <p>Уже есть аккаунт?</p>
+                <a href="#" >Войти</a>
+                </div>
+            </div> 
             
-            <input type="checkbox" name="checkbox" id="checkbox" required >
-            <label for="checkbox" class="checkbox">Я принмаю условия</label>
-            <span class="condition"><a href="#">Условия использования</a></span>
+                <form class="form">
+                    <div class="form__company">
+                    <label for="Название"></label>
+                    <input class="form__company__input"type="text" id="Название" name="Название" placeholder="Введите название компании"  value="Моя компания"/>
+                    </div>
+                    <div class="form__fullname">
+                    <label for="Имя"></label>
+                    <input class="button1" type="text" id="Имя" name="Имя" placeholder="Имя"  />
+                    <label for="Фамилия"></label>
+                    <input class="button2" type="text" id="Фамилия" name="Имя" placeholder="Фамилия"  />
+                </div>
+                <div class="form__email">
+                    <label for="email"></label>
+                    <input type="email" id="email" name="email" placeholder="E-mail" required />
+                </div>
+
+                <div class="register">
+                    <button type="submit"><p class="register__text">Зарегистрироваться</p></button>
+                    
+                </div>
+                <div class="checkbox-conditions">
+                    
+                    <input type="checkbox" name="checkbox" id="checkbox" required >
+                    <label for="checkbox">Я принимаю условия</label>
+                    <a class="condition__link" href="#"> Условия использования</a>
+                </div>
+                </form>
+        </main>
+    </div>
         </div>
-        </form>
-   </main>
-    
-</body>
-</html>
+        </body>
+        </html>
